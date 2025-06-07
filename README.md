@@ -1,15 +1,14 @@
 
-# Wdone
+# Task Manager
 
-Wdone/WellDone or whatever you prefer to call it, is a simple laravel web-aplication, that allows a user to manage their tasks. The user can create, view, edit and delete the tasks.
+Um gerenciador de tarefas simples desenvolvido com Laravel. Permite ao usuário criar, visualizar, editar e excluir tarefas de forma prática.
 
 ## Features
 
-- ✅ Create new tasks
-- 📝 Edit existent tasks
-- 🗑️ Delete done tasks
-- 👀 View the pendent tasks
-
+- ✅ Criar novas tarefas  
+- 📝 Editar tarefas existentes  
+- 🗑️ Excluir tarefas concluídas  
+- 👀 Visualizar tarefas pendentes
 
 ## Tech Stack
 

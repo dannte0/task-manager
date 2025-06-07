@@ -6,13 +6,14 @@ use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class TaskController extends Controller
 {
     public function index(): View
     {
-        $tasks = Task::all();
+        $tasks = Task::orderBy('is_completed', 'asc')->get();
 
         return view('tasks.index', ['tasks' => $tasks]);
     }
@@ -55,5 +56,16 @@ class TaskController extends Controller
         $task->delete();
 
         return redirect()->route('index')->with('message', 'The task has been deleted!');
+    }
+    
+    public function setHasComplete(Task $task)
+    {
+        $task->is_completed = !$task->is_completed;
+
+        $taskStatus = $task->is_completed ? 'checked' : 'unchecked';
+
+        $task->save();
+
+        return redirect()->back()->with('message', 'The task has been '. $taskStatus .'!');
     }
 }
