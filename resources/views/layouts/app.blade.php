@@ -13,7 +13,7 @@
     <div class="relative flex bg-blue-900/75 gap-5 p-3 items-center shadow-xl">
         @if (!request()->routeIs('index'))
             <div class="absolute left-3 flex max-w-20 items-center justify-center">
-                <a href="{{ route('index') }}"
+                <a href="{{ request()->routeIs('notes.create') ? route('tasks.show', $task) : route('index') }}"
                     class="rounded items-center justify-center gap-1 flex text-base text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-5">
