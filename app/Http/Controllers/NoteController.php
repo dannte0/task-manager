@@ -10,7 +10,7 @@ class NoteController extends Controller
 {
     public function create(Task $task)
     {
-        return view('tasks.createNotes', ['task'=> $task]);
+        return view('notes.create', ['task' => $task]);
     }
 
     public function store(Request $request, Task $task)
@@ -21,20 +21,25 @@ class NoteController extends Controller
 
         $task->notes()->save($note);
 
-        return redirect()->route('tasks.show', $task->id)->with('message', 'The note has been added at the task!');
+        return redirect()->route('tasks.show', $note->task)->with('message', 'The note has been added at the task!');
     }
 
-    public function edit(Note $note)
+    public function edit(Task $task, Note $note)
     {
-        //
+        return view('notes.edit', ['task' => $task, 'note' => $note]);
     }
+    
     public function update(Request $request, Note $note)
     {
-        //
+        $note->update($request->all()); 
+
+        return redirect()->route('tasks.show', $note->task)->with('message', 'The note has been updated!');
     }
 
     public function destroy(Note $note)
     {
-        //
+        $note->delete();
+
+        return redirect()->route('tasks.show', $note->task)->with('message', 'The note has been deleted!');
     }
 }

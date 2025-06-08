@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Note extends Model
 {
     protected $fillable = [
-        'notes',
+        'note',
         'task_id',
     ];
 

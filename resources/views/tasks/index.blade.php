@@ -12,7 +12,7 @@
                         class="{{ $task->is_completed ? 'line-through decoration-2' : '' }} p-3 text-start text-xl hover:bg-blue-900/20 hover:rounded hover:text-gray-100 w-full relative">
                         <li>
                             {{ $task->title }}
-                            <p class="absolute text-base right-2 bottom-4 text-gray-500"> {{ $task->created_at->format('m/d/Y') }}
+                            <p class="absolute text-base right-2 bottom-4 text-gray-500"> {{ $task->created_at->format('m/d/Y H:i') }}
                             </p>
                         </li>
                     </a>
