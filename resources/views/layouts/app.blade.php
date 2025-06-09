@@ -30,7 +30,7 @@
 
     @session('message')
         <div x-data="{ show: true }" x-show="show"
-            class="items-center justify-between rounded border border-blue-500 bg-blue-100 p-5 mt-10 w-full max-w-xl flex mx-auto">
+            class="items-center justify-between rounded border border-blue-500 bg-blue-100 p-5 mt-10 w-full max-w-xl flex mx-auto translate-y-1">
             <p>{{ session('message') }}</p>
             <button @click="show = !show" class="cursor-pointer text-gray-600 float-end">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

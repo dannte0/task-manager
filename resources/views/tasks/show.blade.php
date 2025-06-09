@@ -39,7 +39,7 @@
                 </div>
                 <div class="flex gap-3 justify-center">
                     <a href="{{ route('tasks.edit', $task) }}"
-                        class="rounded transition border-1 border-blue-700 text-blue-700 p-2 cursor-pointer hover:bg-blue-700 hover:transition hover:text-white">
+                        class="rounded transition border-1 border-blue-700 text-blue-700 p-2 cursor-pointer hover:bg-blue-700 hover:transition hover:text-white transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -51,7 +51,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit"
-                            class="rounded transition border-1 border-red-700 text-red-700 p-2 cursor-pointer hover:bg-red-700 hover:transition hover:text-white"><svg
+                            class="rounded transition border-1 border-red-700 text-red-700 p-2 cursor-pointer hover:bg-red-700 hover:transition hover:text-white transition duration-300"><svg
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -72,17 +72,17 @@
                 <div
                     class="relative flex gap-2 basis-1/4 rounded-xl items-center justify-center bg-slate-300 p-4 h-[150px] w-[100px] shadow-lg">
                     <p>{{ $note->note }}</p>
-                    <div class="flex items-center absolute top-0 right-0">
+                    <div class="flex items-center space-x-2 absolute top-0 right-1">
                         <a href="{{ route('notes.edit', $note) }}">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-5 text-black transition hover:text-blue-700">
+                                stroke="currentColor" class="size-5 text-black transition hover:text-blue-700 transition duration-300">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                             </svg></a>
                         <form action="{{ route('notes.destroy', $note) }}" method="post" class="">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="rounded transition p-2 cursor-pointer">
+                            <button type="submit" class="rounded transition p-2 cursor-pointer transition duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
                                     class="size-5 text-black transition hover:text-red-700">
@@ -95,13 +95,13 @@
                     </div>
                 </div>
             @empty
-                <a href="{{ route('notes.create', $task) }}" class="text-blue-500 hover:text-blue-700">Wish add notes about
+                <a href="{{ route('notes.create', $task) }}" class="text-blue-500 hover:text-blue-700 transition duration-300">Wish add notes about
                     to the task?</a>
             @endforelse
             @if ($task->notes->count())
                 <a href="{{ route('notes.create', $task) }}">
                     <div
-                        class="w-full flex gap-2 rounded-xl bg-blue-100 items-center justify-center h-[100px] text-base w-[200px] shadow-lg text-blue-500 hover:text-blue-700 p-3">
+                        class="w-full flex gap-2 rounded-xl bg-blue-100 items-center justify-center h-[100px] text-base w-[200px] shadow-lg text-blue-500 hover:text-blue-700 p-3 transition duration-300">
                         Wish add more notes?
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-5">

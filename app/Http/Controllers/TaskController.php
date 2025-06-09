@@ -11,9 +11,11 @@ use Illuminate\View\View;
 
 class TaskController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
-        $tasks = Task::orderBy('is_completed', 'asc')->get();
+        $title = $request->input('search');
+
+        $tasks = Task::title($title)->orderBy('is_completed', 'asc')->orderBy('created_at', 'desc')->get();
 
         return view('tasks.index', ['tasks' => $tasks]);
     }
