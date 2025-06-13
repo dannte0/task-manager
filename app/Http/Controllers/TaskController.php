@@ -70,4 +70,15 @@ class TaskController extends Controller
 
         return redirect()->back()->with('message', 'The task has been '. $taskStatus .'!');
     }
+
+    public function setPinned(Task $task)
+    {
+        $task->is_pinned = !$task->is_pinned;
+
+        $taskStatus = $task->is_pinned ? 'pinned' : 'unpinned';
+
+        $task->save();
+
+        return redirect()->back()->with('message', 'The task has been '. $taskStatus .'!');
+    }
 }

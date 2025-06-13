@@ -20,7 +20,7 @@
             <div class="mt-3">
                 <input type="submit"
                     class="rounded w-30 bg-blue-900/75 hover:bg-blue-900 transition text-white p-2 float-right cursor-pointer"
-                    value="{{ isset($note) ? 'Update' : 'Add' }}">
+                    value="{{ isset($note) ? 'Save' : 'Add' }}">
             </div>
         </form>
     </div>

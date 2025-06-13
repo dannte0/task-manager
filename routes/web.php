@@ -15,3 +15,4 @@ Route::delete('notes/{note}', [NoteController::class, 'destroy'])->name('notes.d
 
 Route::resource('tasks', TaskController::class);
 Route::put('/check-task/{task}', [TaskController::class, 'setHasComplete'])->name('check.task');
+Route::put('/pin-task/{task}', [TaskController::class, 'setPinned'])->name('pin.task');

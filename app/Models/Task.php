@@ -11,7 +11,8 @@ class Task extends Model
     protected $fillable = [
         'title',
         'details',
-        'is_completed'
+        'is_completed',
+        'is_pinned'
     ];
 
     public function notes(): HasMany
