@@ -3,19 +3,36 @@
 
 Um gerenciador de tarefas simples desenvolvido com Laravel. Permite ao usuário criar, visualizar, editar e excluir tarefas de forma prática.
 
-## Features
+A simple task manager developed with Laravel. It allows users to create, view, edit, and delete tasks in a practical way.
+
+## Funcionalidades
 
 - ✅ Criar novas tarefas  
 - 📝 Editar tarefas existentes  
 - 🗑️ Excluir tarefas concluídas  
 - 👀 Visualizar tarefas pendentes
+- ✔ Marcar tarefas como concluídas ou manter como ainda pendentes
+- 🔎 Buscar tarefas por titulos
+- 📌 Fixar tarefas importantes
+A simple task manager developed with Laravel. It allows the user to create, view, edit and delete tasks in a practical way.
+
+## Features
+
+- ✅ Create new tasks
+- 📝 Edit existing tasks
+- 🗑️ Delete completed tasks
+- 👀 View pending tasks
+- ✔ Mark tasks as completed or keep as still pending
+- 🔎 Search for tasks by title
+- 📌 Pin important tasks
+  
 
 ## Tech Stack
 
 - **Back-end:** Laravel 12, PHP
 - **Front-end:** Alpine.js, TailwindCSS, Laravel Blade
 - **Database:** PostgreSQL
-- **Development Tools:** XAMPP, Vite
+- **Development Tools:** Vite
 
 
 
